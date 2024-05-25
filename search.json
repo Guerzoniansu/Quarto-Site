@@ -1,0 +1,431 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Acme",
+    "section": "",
+    "text": "Dedicated to Quarto programming\nQuarto is a next-generation evolution of R Markdown created by Posit. It offers several advantages for data scientists and R users:\n\nMulti-language support: Unlike R Markdown which is primarily focused on R, Quarto allows you to seamlessly integrate code from other languages like Python and Julia alongside your R code in the same document.\nExtended Functionality: Quarto unifies functionalities from various R Markdown ecosystem packages (like bookdown, distill, xaringan) into a single system. This simplifies the process and offers a more consistent workflow.\nExisting R Markdown Compatibility: Most existing R Markdown files (.Rmd) can be rendered directly in Quarto without any modifications. This ensures a smooth transition for users familiar with R Markdown.\nNative ObservableJS support: Quarto offers built-in support for ObservableJS, a JavaScript library known for its reactive programming features. This is particularly useful for creating interactive data visualizations and explorations within your reports.\nRich Output Formats: While R Markdown offered some output options, Quarto boasts a wider range of built-in output formats. You can generate reports in HTML, PDF, Word, presentations, and even websites, all from a single source document.\nSpecial Project Templates: Quarto provides pre-built templates specifically designed for different project types like websites, books, and blogs. This streamlines the document creation process and ensures a professional layout.\nRStudio Integration: If you use RStudio, Quarto integrates seamlessly. You can edit your code and markdown side-by-side, and preview the rendered document within the viewer tab as you work on your project.\n\nOverall, Quarto in R provides a powerful and versatile framework for creating data analysis reports, reproducible research documents, interactive visualizations, and various other content tailored for scientific communication.\n\nOverview Projects\n\n\n\nPurpose\nThis website’s purpose is to demonstrate the efficiency of quarto when it comes to building websites. Here, you can find all the projects made by all the teams incorporated and their results, including the source codes."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "overview/guide.html",
+    "href": "overview/guide.html",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax. Pandoc markdown is an extended and slightly revised version of John Gruber’s Markdown syntax.\nMarkdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read:\n\nA Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. – John Gruber\n\nThis document provides examples of the most commonly used markdown syntax. See the full documentation of Pandoc’s Markdown for more in-depth documentation.\n\n\n\n\nSome markdown syntax to know\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*, **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\n\n\n\nHeadings in Quarto markdown\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6\n\n\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n&lt;https://quarto.org&gt;\nhttps://quarto.org\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![A cool panda image](panda.png)\n\n\n\n[![A cool panda image](panda.png)](https://quarto.org)\n\n\n\n[![](panda.png){fig-alt=\"A cool panda image\"}](https://quarto.org)\n\n\n\n\n\n\n\n\n\n\nMarkdown Syntax\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\nOutput\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1\n\n\n\n\n\n\nCode are inserted in Quarto mainly like in Rmarkdown. One major difference is the fact that it is possible to add a simple snippet of code in Quarto like by using simple three quotes: ```default\nMarkdown syntax\n    ```default\n    Code here\n    ```\nOutput\n    Code here\nNotice that we wrote default. That is used for a language that is not supported by Quarto directly, and without that default, it will considered as a code snippet:\nMarkdown syntax\n    ```\n    Code here\n    ```\nOutput\n    Code here\nFor a supported language, we use the following:\nMarkdown syntax\n\n    ```{.language-name}\n        code\n    ```\nFor example:\n\n    ```{.python}\n        1 + 1\n    ```\n    1 + 1\nThis is still a code snippet.\nTo insert a code that is supposed to run, we remove the . in the brackets:\nFor example:\n\n\nShow the code\n    1 + 1\n\n\n2\n\n\n\n\n\nUse $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninline math: $E = mc^{2}$\ninline math: \\(E = mc^{2}\\)\n\n\ndisplay math: $$E = mc^{2}$$\ndisplay math: \\[E = mc^{2}\\]\n\n\n\n\n\n\nQuarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, gantt charts, and more using a plain text syntax inspired by markdown.\nExample:\nMarkdown syntax\n    ```{mermaid}\nflowchart LR\nA[Hard edge] --&gt; B(Round edge)\nB --&gt; C{Decision}\nC --&gt; D[Result one]\nC --&gt; E[Result two]\n```\nOutput\n\n\n\n\n\nflowchart LR\n    A[Hard edge] --&gt; B(Round edge)\n    B --&gt; C{Decision}\n    C --&gt; D[Result one]\n    C --&gt; E[Result two]\n\n\n\n\n\n\n\n\nMermaid is a Javascript based diagramming and charting tool that uses Markdown-inspired text definitions and a renderer to create and modify complex diagrams.\nMermaid diagrams use %% as their comment syntax, and so cell options are declared using %%|. Cell options must be included directly beneath the start of the diagram code chunk.\nAbove we demonstrated a flowchart created with Mermaid, here is a sequence diagram (also embedded using a {mermaid} executable cell):\n    ```{mermaid}\nsequenceDiagram\nparticipant Alice\nparticipant Bob\nAlice-&gt;&gt;John: Hello John, how are you?\nloop Healthcheck\n    John-&gt;&gt;John: Fight against hypochondria\nend\nNote right of John: Rational thoughts &lt;br/&gt;prevail!\nJohn--&gt;&gt;Alice: Great!\nJohn-&gt;&gt;Bob: How about you?\nBob--&gt;&gt;John: Jolly good!\n```\n\n\n\n\n\nsequenceDiagram\nparticipant Alice\nparticipant Bob\nAlice-&gt;&gt;John: Hello John, how are you?\nloop Healthcheck\n    John-&gt;&gt;John: Fight against hypochondria\nend\nNote right of John: Rational thoughts &lt;br/&gt;prevail!\nJohn--&gt;&gt;Alice: Great!\nJohn-&gt;&gt;Bob: How about you?\nBob--&gt;&gt;John: Jolly good!\n\n\n\n\n\n\n\n\n\nThe Graphviz layout programs take descriptions of graphs in a simple text language, and make diagrams in useful formats. Graphviz has many useful features for concrete diagrams, such as options for colors, fonts, tabular node layouts, line styles, hyperlinks, and custom shapes.\nGraphviz diagrams use // as their comment syntax, and so cell options are declared using //|. Cell options must be included directly beneath the start of the diagram code chunk.\nFor example, here is a simple undirected graph created using graphviz:\n    ::: {#fig-simple}\n\n    ```{dot}\ngraph G {\nlayout=neato\nrun -- intr;\nintr -- runbl;\nrunbl -- run;\nrun -- kernel;\nkernel -- zombie;\nkernel -- sleep;\nkernel -- runmem;\nsleep -- swap;\nswap -- runswap;\nrunswap -- new;\nrunswap -- runmem;\nnew -- runmem;\nsleep -- runmem;\n}\n```\n\n    This is a simple graph with Graphviz\n    :::\n\n\n\n\n\n\n\n\n\n\nG\n\n\n\nrun\n\nrun\n\n\n\nintr\n\nintr\n\n\n\nrun--intr\n\n\n\n\nkernel\n\nkernel\n\n\n\nrun--kernel\n\n\n\n\nrunbl\n\nrunbl\n\n\n\nintr--runbl\n\n\n\n\nrunbl--run\n\n\n\n\nzombie\n\nzombie\n\n\n\nkernel--zombie\n\n\n\n\nsleep\n\nsleep\n\n\n\nkernel--sleep\n\n\n\n\nrunmem\n\nrunmem\n\n\n\nkernel--runmem\n\n\n\n\nsleep--runmem\n\n\n\n\nswap\n\nswap\n\n\n\nsleep--swap\n\n\n\n\nrunswap\n\nrunswap\n\n\n\nswap--runswap\n\n\n\n\nrunswap--runmem\n\n\n\n\nnew\n\nnew\n\n\n\nrunswap--new\n\n\n\n\nnew--runmem\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: This is a simple graph with Graphviz\n\n\n\n\n\n\n\nYou can embed videos in documents using the video shortcode. For example, here we embed a YouTube video\nHere is an example:\n\n\n\n\nIt is possible to embed .qmd and .ipynb files into a Quarto document. Here, you can see examples of it. For HTML outputs, it is possible to embed .pdf files too.\nHere is an example:\n\n    It appears you don't have a PDF plugin for this browser.\n    No biggie... you can click here to\n    download the PDF file.\n\n\n\n\nCallouts are an excellent way to draw extra attention to certain concepts, or to more clearly indicate that certain content is supplemental or applicable to only some scenarios.\n\n\nThere are five different types of callouts available.\n\nnote\nwarning\nimportant\ntip\ncaution\n\nThe color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output:\n\n\n\n\n\n\nNote\n\n\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\n\nTip with Title\n\n\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n::: {.callout-note}\nNote that there are five types of callouts, including:\n`note`, `warning`, `important`, `tip`, and `caution`.\n:::\n\n::: {.callout-tip}\n## Tip with Title\n\nThis is an example of a callout with a title.\n:::\n\n::: {.callout-caution collapse=\"true\"}\n## Expand To Learn About Collapse\n\nThis is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse=\"true\"` to collapse it by default or `collapse=\"false\"` to make a collapsible callout that is expanded by default.\n:::\n\n\n\nYou can create ‘folded’ callouts that can be expanded by the user by settings the collapse attribute on the callout. If you set collapse=true, the callout will be expandable, but will be collapsed by default. If you set collapse=false, the callout will be expandable, but will be expanded by default.\n\n\n\nCallouts have 3 different looks you can use.\n\nCallouts looks\n\n\n\n\n\n\ndefault\nThe default appearance with colored header and an icon.\n\n\nsimple\nA lighter weight appearance that doesn’t include a colored header background.\n\n\nminimal\nA minimal treatment that applies borders to the callout, but doesn’t include a header background color or icon.\n\n\n\nPlease refer to the quarto website for more information.",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#dedicated-to-quarto-programming",
+    "href": "index.html#dedicated-to-quarto-programming",
+    "title": "Welcome to Acme",
+    "section": "",
+    "text": "Quarto is a next-generation evolution of R Markdown created by Posit. It offers several advantages for data scientists and R users:\n\nMulti-language support: Unlike R Markdown which is primarily focused on R, Quarto allows you to seamlessly integrate code from other languages like Python and Julia alongside your R code in the same document.\nExtended Functionality: Quarto unifies functionalities from various R Markdown ecosystem packages (like bookdown, distill, xaringan) into a single system. This simplifies the process and offers a more consistent workflow.\nExisting R Markdown Compatibility: Most existing R Markdown files (.Rmd) can be rendered directly in Quarto without any modifications. This ensures a smooth transition for users familiar with R Markdown.\nNative ObservableJS support: Quarto offers built-in support for ObservableJS, a JavaScript library known for its reactive programming features. This is particularly useful for creating interactive data visualizations and explorations within your reports.\nRich Output Formats: While R Markdown offered some output options, Quarto boasts a wider range of built-in output formats. You can generate reports in HTML, PDF, Word, presentations, and even websites, all from a single source document.\nSpecial Project Templates: Quarto provides pre-built templates specifically designed for different project types like websites, books, and blogs. This streamlines the document creation process and ensures a professional layout.\nRStudio Integration: If you use RStudio, Quarto integrates seamlessly. You can edit your code and markdown side-by-side, and preview the rendered document within the viewer tab as you work on your project.\n\nOverall, Quarto in R provides a powerful and versatile framework for creating data analysis reports, reproducible research documents, interactive visualizations, and various other content tailored for scientific communication."
+  },
+  {
+    "objectID": "overview.html",
+    "href": "overview.html",
+    "title": "Get started in Quarto",
+    "section": "",
+    "text": "Installation\nMost of this part is done on the official website of Quarto. Please, refer to the website.\n\nDownload the appropriate QuartoCLI for your system on the website\n\n\nHere is an example of what you are supposed to get for a windows configuration.\n\nOnce the download completed, you need to run the downloaded file on your computer\n\n\nNow you just have to follow the steps according to what you want yourself and finish it. Of course, we are continuing the example for a windows system.\nYou might run into issues for this part. Please refer to the documentation on the website\n\nThat’s it! You’ve successfully installed Quarto on your computer\n\nNow let’s start doing the interesting part. We want to write some code, do some nice presentation, documents, pdfs and even websites like this one.\nFirst things first, we need to choose our favorite development tool/editor or our mix of editor.\n\n\nEditors\n\n \n\nVSCode\n\n  \n\nRStudio\n\n  \n\nJupyter\n\n  \n\nNeovim\n\n\n\n\nVSCodeRStudioJupyter LabNeovim\n\n\nAfter installing Visual Studio Code, you need to install the quarto extension to be able to build a project with it.\n\nOn VSCode, things are pretty simple. To create a quarto document, you just need to give it the correct extension (qmd).\nQuarto can render multiple formats on Visual Studio Code (pdf, html, word etc.) In addition to that, it is possible in a Quarto file to render a Jupyter Notebook as a .qmd file or .ipynb file.\nWe will later on, cover how specifically we preview and render files with Quarto on VS Code.\n\n\nThe minimal version of R Studio that has support to Quarto is RStudio v2022.07. Later versions of R Studio are also good candidates. We will not go through the installation of RStudio itself. We assume you to understand how it is done.\n\nCreating documents\nTo create a Quarto document, you go to: File:New file: Quarto Document. And again for a Quarto Presentation, you select the appropriate button Quarto Presentation.\n\nWe will, later on, cover how specifically we preview and render files with Quarto on RStudio.\n\n\n\nJupyter Lab is a little bit different because we use it to create .ipynb files. But Quarto is integrated in Jupyter Lab so that it is possible to write YAML options to knit a notebook. Here we do not need to create a .qmd file since it will knited to our desired format anyway\nThe code, we are going to be kniting into a html format (It is also possible to knit it to other formats): \nThis is the code used by Quarto site themselves.\nAs you can see, we created a YAML header first like in any .qmd file and then we we wrote down markdown code befor our python chunk. We will, later on, cover how to preview and render those files on Juypterlab.\n\n\nIn Neovim, you can just create a new .qmd like in RStudio and the write basic quarto code. Here is what the UI should look like:\n\nNeovim’s case is a little bit special. Most of you all should not be very familiar with Neovim but if you want to understand better using quarto in Neovim, please visit this page on Quarto website\n\n\n\nGuide",
+    "crumbs": [
+      "Overview",
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "overview.html#vscode",
+    "href": "overview.html#vscode",
+    "title": "Get started in Quarto",
+    "section": "VSCode",
+    "text": "VSCode\nmessage",
+    "crumbs": [
+      "Overview",
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "overview.html#rstudio",
+    "href": "overview.html#rstudio",
+    "title": "Get started in Quarto",
+    "section": "RStudio",
+    "text": "RStudio\nmessage",
+    "crumbs": [
+      "Overview",
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "overview.html#jupyter",
+    "href": "overview.html#jupyter",
+    "title": "Get started in Quarto",
+    "section": "Jupyter",
+    "text": "Jupyter\nmessage",
+    "crumbs": [
+      "Overview",
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "overview.html#neovim",
+    "href": "overview.html#neovim",
+    "title": "Get started in Quarto",
+    "section": "Neovim",
+    "text": "Neovim\nmessage",
+    "crumbs": [
+      "Overview",
+      "Get started"
+    ]
+  },
+  {
+    "objectID": "demo/ipynb/quarto_demo.html",
+    "href": "demo/ipynb/quarto_demo.html",
+    "title": "Quarto Demo for RStudio",
+    "section": "",
+    "text": "Demonstration\nFor a demonstration of a line plot on a ploar axis plot, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr =np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection':'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "overview/guide.html#overview",
+    "href": "overview/guide.html#overview",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax. Pandoc markdown is an extended and slightly revised version of John Gruber’s Markdown syntax.\nMarkdown is a plain text format that is designed to be easy to write, and, even more importantly, easy to read:\n\nA Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. – John Gruber\n\nThis document provides examples of the most commonly used markdown syntax. See the full documentation of Pandoc’s Markdown for more in-depth documentation.",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#text-formatting",
+    "href": "overview/guide.html#text-formatting",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Some markdown syntax to know\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics*, **bold**, ***bold italics***\nitalics, bold, bold italics\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#headings",
+    "href": "overview/guide.html#headings",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Headings in Quarto markdown\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#header-2",
+    "href": "overview/guide.html#header-2",
+    "title": "Guide through Quarto",
+    "section": "Header 2",
+    "text": "Header 2\n\n### Header 3 | ### Header 3 |\n#### Header 4 | #### Header 4 |\n##### Header 5 | ### Header 5 |\n###### Header 6 | #### Header 6 |",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#links-and-images",
+    "href": "overview/guide.html#links-and-images",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Markdown Syntax\nOutput\n\n\n\n\n&lt;https://quarto.org&gt;\nhttps://quarto.org\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![A cool panda image](panda.png)\n\n\n\n[![A cool panda image](panda.png)](https://quarto.org)\n\n\n\n[![](panda.png){fig-alt=\"A cool panda image\"}](https://quarto.org)",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#lists",
+    "href": "overview/guide.html#lists",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Markdown Syntax\n* unordered list\n    + sub-item 1\n    + sub-item 2\n        - sub-sub-item 1\nOutput\n\nunordered list\n\nsub-item 1\nsub-item 2\n\nsub-sub-item 1\n\n\n\nMarkdown Syntax\n\n1. ordered list\n2. item 2\n    i) sub-item 1\n         A.  sub-sub-item 1\nOutput\n\nordered list\nitem 2\n\nsub-item 1\n\nsub-sub-item 1\n\n\n\nMarkdown Syntax\n\n(@)  A list whose numbering\n\ncontinues after\n\n(@)  an interruption\nOutput\n\nA list whose numbering\n\ncontinues after\n\nan interruption\n\nMarkdown Syntax\n::: {}\n1. A list\n:::\n\n::: {}\n1. Followed by another list\n:::\nOutput\n\n\nA list\n\n\n\n\nFollowed by another list\n\n\nMarkdown Syntax\nterm\n: definition\nOutput\n\nterm\n\ndefinition",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#tables",
+    "href": "overview/guide.html#tables",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Markdown Syntax\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\nOutput\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#sources-code",
+    "href": "overview/guide.html#sources-code",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Code are inserted in Quarto mainly like in Rmarkdown. One major difference is the fact that it is possible to add a simple snippet of code in Quarto like by using simple three quotes: ```default\nMarkdown syntax\n    ```default\n    Code here\n    ```\nOutput\n    Code here\nNotice that we wrote default. That is used for a language that is not supported by Quarto directly, and without that default, it will considered as a code snippet:\nMarkdown syntax\n    ```\n    Code here\n    ```\nOutput\n    Code here\nFor a supported language, we use the following:\nMarkdown syntax\n\n    ```{.language-name}\n        code\n    ```\nFor example:\n\n    ```{.python}\n        1 + 1\n    ```\n    1 + 1\nThis is still a code snippet.\nTo insert a code that is supposed to run, we remove the . in the brackets:\nFor example:\n\n\nShow the code\n    1 + 1\n\n\n2",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#equations",
+    "href": "overview/guide.html#equations",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Use $ delimiters for inline math and $$ delimiters for display math. For example:\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\ninline math: $E = mc^{2}$\ninline math: \\(E = mc^{2}\\)\n\n\ndisplay math: $$E = mc^{2}$$\ndisplay math: \\[E = mc^{2}\\]",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#diagrams",
+    "href": "overview/guide.html#diagrams",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Quarto has native support for embedding Mermaid and Graphviz diagrams. This enables you to create flowcharts, sequence diagrams, state diagrams, gantt charts, and more using a plain text syntax inspired by markdown.\nExample:\nMarkdown syntax\n    ```{mermaid}\nflowchart LR\nA[Hard edge] --&gt; B(Round edge)\nB --&gt; C{Decision}\nC --&gt; D[Result one]\nC --&gt; E[Result two]\n```\nOutput\n\n\n\n\n\nflowchart LR\n    A[Hard edge] --&gt; B(Round edge)\n    B --&gt; C{Decision}\n    C --&gt; D[Result one]\n    C --&gt; E[Result two]\n\n\n\n\n\n\n\n\nMermaid is a Javascript based diagramming and charting tool that uses Markdown-inspired text definitions and a renderer to create and modify complex diagrams.\nMermaid diagrams use %% as their comment syntax, and so cell options are declared using %%|. Cell options must be included directly beneath the start of the diagram code chunk.\nAbove we demonstrated a flowchart created with Mermaid, here is a sequence diagram (also embedded using a {mermaid} executable cell):\n    ```{mermaid}\nsequenceDiagram\nparticipant Alice\nparticipant Bob\nAlice-&gt;&gt;John: Hello John, how are you?\nloop Healthcheck\n    John-&gt;&gt;John: Fight against hypochondria\nend\nNote right of John: Rational thoughts &lt;br/&gt;prevail!\nJohn--&gt;&gt;Alice: Great!\nJohn-&gt;&gt;Bob: How about you?\nBob--&gt;&gt;John: Jolly good!\n```\n\n\n\n\n\nsequenceDiagram\nparticipant Alice\nparticipant Bob\nAlice-&gt;&gt;John: Hello John, how are you?\nloop Healthcheck\n    John-&gt;&gt;John: Fight against hypochondria\nend\nNote right of John: Rational thoughts &lt;br/&gt;prevail!\nJohn--&gt;&gt;Alice: Great!\nJohn-&gt;&gt;Bob: How about you?\nBob--&gt;&gt;John: Jolly good!\n\n\n\n\n\n\n\n\n\nThe Graphviz layout programs take descriptions of graphs in a simple text language, and make diagrams in useful formats. Graphviz has many useful features for concrete diagrams, such as options for colors, fonts, tabular node layouts, line styles, hyperlinks, and custom shapes.\nGraphviz diagrams use // as their comment syntax, and so cell options are declared using //|. Cell options must be included directly beneath the start of the diagram code chunk.\nFor example, here is a simple undirected graph created using graphviz:\n    ::: {#fig-simple}\n\n    ```{dot}\ngraph G {\nlayout=neato\nrun -- intr;\nintr -- runbl;\nrunbl -- run;\nrun -- kernel;\nkernel -- zombie;\nkernel -- sleep;\nkernel -- runmem;\nsleep -- swap;\nswap -- runswap;\nrunswap -- new;\nrunswap -- runmem;\nnew -- runmem;\nsleep -- runmem;\n}\n```\n\n    This is a simple graph with Graphviz\n    :::\n\n\n\n\n\n\n\n\n\n\nG\n\n\n\nrun\n\nrun\n\n\n\nintr\n\nintr\n\n\n\nrun--intr\n\n\n\n\nkernel\n\nkernel\n\n\n\nrun--kernel\n\n\n\n\nrunbl\n\nrunbl\n\n\n\nintr--runbl\n\n\n\n\nrunbl--run\n\n\n\n\nzombie\n\nzombie\n\n\n\nkernel--zombie\n\n\n\n\nsleep\n\nsleep\n\n\n\nkernel--sleep\n\n\n\n\nrunmem\n\nrunmem\n\n\n\nkernel--runmem\n\n\n\n\nsleep--runmem\n\n\n\n\nswap\n\nswap\n\n\n\nsleep--swap\n\n\n\n\nrunswap\n\nrunswap\n\n\n\nswap--runswap\n\n\n\n\nrunswap--runmem\n\n\n\n\nnew\n\nnew\n\n\n\nrunswap--new\n\n\n\n\nnew--runmem\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: This is a simple graph with Graphviz",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#videos",
+    "href": "overview/guide.html#videos",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "You can embed videos in documents using the video shortcode. For example, here we embed a YouTube video\nHere is an example:",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#embeds",
+    "href": "overview/guide.html#embeds",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "It is possible to embed .qmd and .ipynb files into a Quarto document. Here, you can see examples of it. For HTML outputs, it is possible to embed .pdf files too.\nHere is an example:\n\n    It appears you don't have a PDF plugin for this browser.\n    No biggie... you can click here to\n    download the PDF file.",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#callout-blocks",
+    "href": "overview/guide.html#callout-blocks",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "Callouts are an excellent way to draw extra attention to certain concepts, or to more clearly indicate that certain content is supplemental or applicable to only some scenarios.\n\n\nThere are five different types of callouts available.\n\nnote\nwarning\nimportant\ntip\ncaution\n\nThe color and icon will be different depending upon the type that you select. Here are what the various types look like in HTML output:\n\n\n\n\n\n\nNote\n\n\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\n\nTip with Title\n\n\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.\n\n\n\n\n\n\n::: {.callout-note}\nNote that there are five types of callouts, including:\n`note`, `warning`, `important`, `tip`, and `caution`.\n:::\n\n::: {.callout-tip}\n## Tip with Title\n\nThis is an example of a callout with a title.\n:::\n\n::: {.callout-caution collapse=\"true\"}\n## Expand To Learn About Collapse\n\nThis is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse=\"true\"` to collapse it by default or `collapse=\"false\"` to make a collapsible callout that is expanded by default.\n:::\n\n\n\nYou can create ‘folded’ callouts that can be expanded by the user by settings the collapse attribute on the callout. If you set collapse=true, the callout will be expandable, but will be collapsed by default. If you set collapse=false, the callout will be expandable, but will be expanded by default.\n\n\n\nCallouts have 3 different looks you can use.\n\nCallouts looks\n\n\n\n\n\n\ndefault\nThe default appearance with colored header and an icon.\n\n\nsimple\nA lighter weight appearance that doesn’t include a colored header background.\n\n\nminimal\nA minimal treatment that applies borders to the callout, but doesn’t include a header background color or icon.\n\n\n\nPlease refer to the quarto website for more information.",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#languages-supported-by-quarto",
+    "href": "overview/guide.html#languages-supported-by-quarto",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "PythonRJuliaObservable Javascript\n\n\nAs an example, we will try KNN on a quarto document:\n\n\n\n\nShow the code\nimport matplotlib.pyplot as plt\n\nx = [4, 5, 10, 4, 3, 11, 14 , 8, 10, 12]\ny = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]\nclasses = [0, 0, 1, 0, 0, 1, 1, 0, 1, 1]\n\nplt.scatter(x, y, c=classes)\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow the code\nfrom sklearn.neighbors import KNeighborsClassifier\n\ndata = list(zip(x, y))\nknn = KNeighborsClassifier(n_neighbors=5)\n\nknn.fit(data, classes)\n\n\nKNeighborsClassifier()In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.  KNeighborsClassifier?Documentation for KNeighborsClassifieriFittedKNeighborsClassifier() \n\n\n\n\n\n\n\nShow the code\nnew_x = 8\nnew_y = 21\nnew_point = [(new_x, new_y)]\n\nprediction = knn.predict(new_point)\n\nplt.scatter(x + [new_x], y + [new_y], c=classes + [prediction[0]])\nplt.text(x=new_x-1.7, y=new_y-0.7, s=f\"new point, class: {prediction[0]}\")\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n?@fig-airquality further explores the impact of temperature on ozone level.\nPlease refer to quarto website for more.\n\n\n\nHere is a sample code:\nusing GLMakie, SGtSNEpi, SNAPDatasets\n\nGLMakie.activate!()\n\ng = loadsnap(:as_caida)\ny = sgtsnepi(g);\nshow_embedding(y;\n  A = adjacency_matrix(g),        # show edges on embedding\n  mrk_size = 1,                   # control node sizes\n  lwd_in = 0.01, lwd_out = 0.001, # control edge widths\n  edge_alpha = 0.03 )             # control edge transparency\nPlease refer to quarto website for more.\n\n\nHere is a sample code:\n\n\nShow the code\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\nPlease refer to quarto website for more.",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#python",
+    "href": "overview/guide.html#python",
+    "title": "Guide through Quarto",
+    "section": "",
+    "text": "As an example, we will try KNN on a quarto document:\n\n\n\n\nShow the code\nimport matplotlib.pyplot as plt\n\nx = [4, 5, 10, 4, 3, 11, 14 , 8, 10, 12]\ny = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]\nclasses = [0, 0, 1, 0, 0, 1, 1, 0, 1, 1]\n\nplt.scatter(x, y, c=classes)\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow the code\nfrom sklearn.neighbors import KNeighborsClassifier\n\ndata = list(zip(x, y))\nknn = KNeighborsClassifier(n_neighbors=1)\n\nknn.fit(data, classes)\n\n\nKNeighborsClassifier(n_neighbors=1)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.  KNeighborsClassifier?Documentation for KNeighborsClassifieriFittedKNeighborsClassifier(n_neighbors=1) \n\n\n\n\n\n\n\nShow the code\nnew_x = 8\nnew_y = 21\nnew_point = [(new_x, new_y)]\n\nprediction = knn.predict(new_point)\n\nplt.scatter(x + [new_x], y + [new_y], c=classes + [prediction[0]])\nplt.text(x=new_x-1.7, y=new_y-0.7, s=f\"new point, class: {prediction[0]}\")\nplt.show()",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#getting-up",
+    "href": "overview/guide.html#getting-up",
+    "title": "Guide through Quarto",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "overview/guide.html#going-to-sleep",
+    "href": "overview/guide.html#going-to-sleep",
+    "title": "Guide through Quarto",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "examples/creating_slide_presentation_revaljs.html#getting-up",
+    "href": "examples/creating_slide_presentation_revaljs.html#getting-up",
+    "title": "My document",
+    "section": "Getting up",
+    "text": "Getting up\n\nTurn off alarm\nGet out of bed"
+  },
+  {
+    "objectID": "examples/creating_slide_presentation_revaljs.html#going-to-sleep",
+    "href": "examples/creating_slide_presentation_revaljs.html#going-to-sleep",
+    "title": "My document",
+    "section": "Going to sleep",
+    "text": "Going to sleep\n\nGet in bed\nCount sheep"
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#quest-ce-que-quarto",
+    "href": "demo/qmd/quarto_pdf.html#quest-ce-que-quarto",
+    "title": "Quarto-Document",
+    "section": "Qu’est ce que Quarto?",
+    "text": "Qu’est ce que Quarto?\nQuarto est un package de R developpé dans le but de produire des presentations, des rapports et des documents sous forme de fichier world, pdf ou html. De meme, elle a la possibilité de produire des presentations sous forme de fichier powerpoint(pptx). Ce package est une exetension du Rmarkdown que nous connaissons tous et qui est utilisé pour faire des documents. A la seule diffrence que Quarto est plus smart et facile à utilisé. nous n’utiliserons pratiquement pas de balise comme c’est le cas dans Rmarkdown pour les titres pour ne citer que cela. Nous vous invitons à suivre attentivement ce recapitulatif de Quarto que nous avons pris le temps de parfaire et esperons que quarto vous sera utile dans votre travail."
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#avantage-de-quarto",
+    "href": "demo/qmd/quarto_pdf.html#avantage-de-quarto",
+    "title": "Quarto-Document",
+    "section": "Avantage de Quarto",
+    "text": "Avantage de Quarto\nTout comme Rmarkdown, Quarto a les memes fonctionnalités que Rmarkdown. En effet elle peut faire tout ce que Rmarkdown peut faire en allant de la generation des documents de qualité à de magnifiques presentation powerpoint. Son avantage par rapport à Rmarkdown reside dans sa facilité d’utilisation. Elle ne necessite pas la maitrise des differentes syntaxes d’ecriture comme le necessiterait Rmarkdown. On peut meme le comparer à l’ecriture d’un fichier sur microsoft office word à la seule difference qu’elle inclut l’utilisation de code que ce soit sur R, python, sql…"
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#modèle-de-sortie-dun-document-quarto",
+    "href": "demo/qmd/quarto_pdf.html#modèle-de-sortie-dun-document-quarto",
+    "title": "Quarto-Document",
+    "section": "Modèle de sortie d’un document Quarto",
+    "text": "Modèle de sortie d’un document Quarto\nQuarto nous propose plusieurs modèle de sortie pour nos documents. En effet nous pouvons generer des documents sous format world, powerpoint, html, powerpoint. Elle nous offre une large game de document sous plusieurs extensions."
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#mettre-du-code-dans-un-fichier-quarto",
+    "href": "demo/qmd/quarto_pdf.html#mettre-du-code-dans-un-fichier-quarto",
+    "title": "Quarto-Document",
+    "section": "Mettre du code dans un fichier Quarto",
+    "text": "Mettre du code dans un fichier Quarto\nTout comme Rmarkdown, nous avons la possibilité d’inclure un grand nombre de zone pour inclure du code. En effet on appelle ces zones des chunks: Ces zones grisatres nous premettent d’inclure du code R, python, Sql, CSS, JAVA…\nl’utilisation de R est definie par defaut dans les chunks, donc nous n’avons pas besoin de packages specifiques pour pouvoir l’utiliser. Cependant à la difference des autres languages, elle necessite l’installation de certains packages par exemple dans le cas de python, il est necessaire d’installer le package reticulate pour pouvoir l’utiliser."
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#installation-de-quarto",
+    "href": "demo/qmd/quarto_pdf.html#installation-de-quarto",
+    "title": "Quarto-Document",
+    "section": "Installation de Quarto",
+    "text": "Installation de Quarto\nPour installer Quarto, il vous suffit de l'installer à partir de packages en installant Quarto directement à partir du CRAN.\nSi celà ne fonctionne pas, il suffit de reinstaller R et Rstudio et de reprendre la procedure. Apres quoi, vous pouvez maintenat l’installer à partir de de la fonction library(quarto). Enfin à partir de l’onglet file, vous avez accès à Quarto pour l’utiliser pleinement."
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#description-de-lenvironnement-de-quarto",
+    "href": "demo/qmd/quarto_pdf.html#description-de-lenvironnement-de-quarto",
+    "title": "Quarto-Document",
+    "section": "Description de l’environnement de Quarto",
+    "text": "Description de l’environnement de Quarto\nLe document Quarto comprend 3 parties que sont l’en-tête (YAML), le texte et les blocs de codes tous les trois forment le corps du document. Dans l’en-tete sont précisés des formats additionnels pour le document (Table de matières, références s’il y en a, des packages Latex à inclure si possible).\nQuelques astcuces que vous pouvez utilisez pour le corps du devoir:\n\nInsertion des titres\nPour insérer un nouveau titre, nous utilisons sur la barre, l’onglet Normal. En effet, nous avons à l’interieur de cet onglet, plusieurs niveaux de titre que nous pourrons utiliser pour rendre plus esthetique nos presentations. nous avons jusqu’a 6 titres que nous pourrons utiliser.\nTitre 1: niveau 1\nTitre 2: niveau 2\nTitre 3: niveau 3\nTitre 4: niveau 4\nTitre 5: niveau 5\nTitre 6: niveau 6\npar defaut le texte est sous format Normal\nStyle du texte\n\nPour écrire le texte en gras il suffit d’appuyer sur la touche B qui se trouve sur la barre, ou on peut appyer sur format pour l’obtenir (c’est ecrit B Bold).\nPour écrire le texte en Italique il suffit d’appuyer sur la touche I qui se trouve sur la barre, ou on peut appyer sur format pour l’obtenir (c’est ecrit I Italique).\nPour écrire le texte en Italique et en Gras il suffit d’appuyer sur la touche I et G qui se trouve sur la barre, ou on peut appyer sur format pour l’obtenir (c’est ecrit I Italique et G Bold).\nPour souligner un texte, il suffit d’aller dans l’onglet Format et d’appuyer sur U (Underline).\nPour barrer un texte, il suffit d’allez dans l’onglet Format et au niveau de Texte on appuie sur Strickout.\nPour mettre un mot en exposant, il suffit d’aller dans Format et au niveau de Texte on appuie sur Superscript\nPour mettre un mot en indice, il suffit d’aller dans Format et au niveau de Texte on appuie sur Subscript.\nPour mettre un mot en majuscule ou en miniscule selon le format ou il initialement ecrit , il suffit d’aller dans Format et au niveau de Texte on appuie sur Small Caps.\n\nMise en couleur\nPour les mises en couleur, il faudra une maitrîse du langage CSS. Par exemple supposons que nous voulons metrre le texte suivant: Je suis a l'ENSAE en vert, je sélectionne d’abord mon texte , ensuite je vais dans Format ⟹ Div et dans l’attribut CSS Style je précise mon code pour la couleur. Cependant il peut arriver que je veuilles que seul mon texte Etudiant soit en vert. Là je fais la même chose mais au lieu d’insérer une div, j’insère un span.\ncomme illustration de ce qui a été dit\n\nJe suis a l’ENSAE.\n\npour mettre uniquement un element du texte en couleur on peut utilise la meme methode juste qu’ a la difference on met un spam\npar exemple\n\nEtudiant\n\nBordure de texte\npour encadrer un texte, il faut egalement utilisé du css. On peut encadrer tout le texte ou une partie du texte.\ncomme illustration de ce qui a été dit:\n\n\nJe suis à l’ENSAE de Dakar\n\n\nMise en forme (positionnement de texte):\nPour la position du texte (centrée, justifié, à droite ou à gauche)nous utilisont du code CSS. Nous utilisons les elements suivants:\npour centrer un texte on utilise text-align; center;\n\n\nTexte Centré : je suis en ISE1 Eco\n\nPour mettre le texte à gauche nous utilisons: text-align; left;\n\nText Centrée à gauche Je suis en ISE1 math\n\nPour mettre le texte à droite nous utilisons: text-align; right;\n\nJe suis en ISE1 Cycle long"
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#description-du-yamlen-tete-dun-fichier-quarto",
+    "href": "demo/qmd/quarto_pdf.html#description-du-yamlen-tete-dun-fichier-quarto",
+    "title": "Quarto-Document",
+    "section": "Description du YAML(En tete d’un fichier quarto)",
+    "text": "Description du YAML(En tete d’un fichier quarto)\nPour definir le titre dans l’entete, il suffit de mettre Title: \"Nom du document\"\nPour definir le sous titre dans l’entete, il suffit de mettre Subtitle: “Sous titre”\nPour definir les auteurs dans l’entete, il suffit de mettre Authors: \"YATABARE-Hamid-Sadibou-Maty\"\nPour definir la date dans l’entete, il suffit de mettre date: 14/03/2024\nPour definir la table de matiere dans l’entete, il suffit de mettre\nOutput:\n\nhtml_document:\n\n\npour mettre une table de matiere\n\n\ntoc : true\n\n\nPour mettre des numeros de lignes\n\n\nnumber_sections:true\n\n\nPour avoir une table de matieres flottantes\n\n\ntoc-float: true\ntoc-title: pour le titre de la table de matière\nlof: pour afficher la liste des figures\nlot: pour afficher la liste des tableau.\ncode-line-numbers: pour afficher le numero de ligne dans les blocks de code.\n\nPour la sortie du document, on peut decider d’afficher le document avec les codes et les erreurs ou pas. Pour ne pas les afficher, on peut proceder de la sorte:\n\nexecute:\n\n\necho: false\n\n\nwarning: false\n\nDe meme on a la possibilité d’inclure le code avec les resulats ou pas:\non le fait de la sorte:\ninclude : TRUE/FALSE\noutput : false/true pour afficher les resulats des chunks ou pas.\ninclude-before-body : pour afficher la table de matiere au debut du fichier.\ninclude-after-body : pour afficher la table de matiere enfin du fichier.\ncode-fold: true pour afficher un zone d’affichage du code quand on veut ou pas. cela est possible uniquement avec les fichier avec des sortie html.\nl’instruction ci-dessous permet de generer les 3 fichiers à savoir html, pdf, word directement à partir du YAML.\nformat:\nhtml:\ncode-fold: true\nhtml-math-method: katex\npdf:\ngeometry:\n-top=30mm\n- left=30mm\n\ndocx: default\npour donner un aspect esthetique a votre sortie pour les codes vous pouvez utiliser egalement le code suivant :\nhighlight-style: github\ncela permet de donner un sortie beaucoup plus jolie a votre document"
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#presentation-des-chunks-codes",
+    "href": "demo/qmd/quarto_pdf.html#presentation-des-chunks-codes",
+    "title": "Quarto-Document",
+    "section": "Presentation des chunks codes",
+    "text": "Presentation des chunks codes\nQuarto dispose d’une large game de chunk pour different format de langage: nous vous presenterons la forme de certains langage de programmation couramment utilisé sur des fichiers Quarto\n\nPour les codes R, l’affichage est le suivant:\n\n\n\nCode\nlibrary(ggplot2) \nhead(iris) \n\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\n\n\n\nCode\nggplot(iris ,aes(x = Sepal.Length , y = Sepal.Width))+          \n  geom_smooth()\n\n\n\n\n\n\n\n\n\nDonc nous avons la possibilité de realiser des graphiques et de faire tous ce que l’on pouvait faire d’habitude sur R.\n\nPour les codes python nous pouvons proceder de la sorte:\n\nnous avons au niveau de la barre des onglets Insert et on appuie sur Excecutive Cell a partir de la nous pouvons choisir python pour obtenir un chunk python. Mais bien avant, il faudra avoir installer le package reticulate.\n\n\nCode\nfor i in range(10):   \n  print(i)\n\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\n\nDonc vous voyez deja que l’on peut faire du python sur R. il est possible pour nos travaux d’utiliser les modules pandas ou numpy selon le travail que l’on aimerait faire.\nQuarto dispose d’une possibilité d’inclure plusieurs langage a partir de cette commande que voici: code block. On peut l’obtenir à partir de insert et on appuie sur code block. A partir de cela, on met le langage de programmation que l’on souhaite utiliser bien sur en ayant le package necessaire pour l’utiliser sur R.\n\nEtablir une table de matière:\n\nCela se fait au niveau dU YAML. Nous y avons donnée en detail tous les éléments de comment cela se passe dans la section YAML."
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#numerotation-des-sections",
+    "href": "demo/qmd/quarto_pdf.html#numerotation-des-sections",
+    "title": "Quarto-Document",
+    "section": "Numerotation des sections:",
+    "text": "Numerotation des sections:\nPour creer une numeration sur quarto, il suffit d’aller au niveau de Format et à l’interieur on à l’onglet Bullet et Numbering qui permet de creer des listes. Ces listes peuvent etre ordonnées ou non selon ce que l’on veut faire. par exemple:\n\nYatabare\nHamib\nSadibou\nMaty\nliste non ordonnée\nOu on peut proceder par numerotation:\n\n\nMaty\nSadibou\nHamib\nYatabare\nliste ordonnée"
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#insertion-dimage",
+    "href": "demo/qmd/quarto_pdf.html#insertion-dimage",
+    "title": "Quarto-Document",
+    "section": "Insertion d’image :",
+    "text": "Insertion d’image :\nPour inserer une image dans un fichier Quarto, il suffit d’appuyer sur l’onglet Insert situé sur la barre des taches et de selectionner Figure/image. A partir de cette commande, vous aurez la possibilité d’inclure tout les types de fichier dont vous aurez envie que ce soit de jpeg on du png.\nPar exemple pour du jpeg:\n\n\n\ncarte du senegal\n\n\nVous avez egalement la possibilité de donner un titre à vos images. En effet en voulant l’inserer vous avons caption qui vous permet de mettre le titre de vos images.\nMaintenant il peut arriver qu’on veuille insérer deux image l’une à coté de l’autre et non l’une après l’autre. Pour cela, nous devons insérer d’abord une div et préciser dans son attribut other que notre div contient 2 colonnes par layout-ncol= 2\nEn voici un exemple\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{layout-ncol =” 2” fig-align=“left”}\n\nDe meme, on peut positionner l’image que nous voulons que ce soit à gauche, à droite ou au milieu. Cela s’effectue toujours à partir de figure ou on peut selectionner l’option qui nous convient.\nEgalement au lieu de telecharger le fichier on peut inclure le lien(URL) du fichier si celui ci se trouve sur internet. Toujours cela se passe toujour de la meme facon que le telechargement juste qu’il faut inclure l’URL à la place de l’image.\nAussi nous avons la possibilité d’inserer 2 ou plusieur images l’un à coté de l’autre. Cela se fait de cette manière:\n\n\nCode\nlibrary(ggplot2) \nlibrary(gridExtra) \n\nplot1 &lt;- ggplot(cars, aes(x = speed, y = dist, color = \"blue\")) +  \n  geom_point(alpha = 0.5)  \n  \n\nplot2 &lt;- ggplot(cars, aes(x = speed, y = dist, color = \"yellow\")) +\n  geom_smooth (alpha = 0.5) \n  \ngrid.arrange(plot1, plot2, ncol = 2)"
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#insertion-de-liens-url-etc.",
+    "href": "demo/qmd/quarto_pdf.html#insertion-de-liens-url-etc.",
+    "title": "Quarto-Document",
+    "section": "Insertion de Liens (Url, etc.)",
+    "text": "Insertion de Liens (Url, etc.)\nPour mettre un lien dans un fichier Quarto, la methode est simple, il faudra aller dans Insert. sur la base des onglets et selectionner link .Ensuite mettre le lien et préciser le texte à afficher et sur lequel cliquer pour avoir la page. Voici un exemple:\nUtiliser Quarto sur VScode\nsur Ce lien, il est expliqué comment utiliser directement quarto sur VScode pour ceux et celle qui voudront l’utiliser. A la difference de Rstudio, elle utilise d’autres commande."
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#insertion-de-tableau",
+    "href": "demo/qmd/quarto_pdf.html#insertion-de-tableau",
+    "title": "Quarto-Document",
+    "section": "Insertion de tableau:",
+    "text": "Insertion de tableau:\n\npour inserer des tableaux dans un fichier Quarto, la methode est simple. Il suffit de selectionner Table qui se trouve au dessus sur la barre des onglets. Ainsi, Quarto vous offre la possibilité de choisir le nombre de lignes et de colonnes selon notre convenance. Par exemple , pour creer un tableau de 2 lignes et de 2 colonnes. On peut proceder ainsi:\n\n\n\nVariables\neffectifs\n\n\n\n\nsexe\nmasculin; feminin\n\n\nage\n0 à 21 ans\n\n\n\n\nautres exemple, nous pouvons donner un tableau à 4 lignes et 1 colonnes:\nnous pouvons egalement decider de placer le tableau à gauche, a droite, ou au milieu. On peut le faire avec l’option Table et ensuite on selectionne align column et on choisit l’option selon notre travail.\n\n\n\nEnsae\n\n\n\n\nISE1\n\n\nISEP3\n\n\nAS1\n\n\nISE2\n\n\n\n\n\n\nNom\nprenom\nclasse\n\n\n\n\nNGOM\nSadibou\nISE1\n\n\nKone\nChaka\nISE1\n\n\nSangare\nGnaleen\nISE1\n\n\n\nSupposons mainteant que l’on veuille commenter le tableau mais que le commentaire se trouve à gauche du tableau. On place alors dans notre précédente div un texte à la place du deuxième tableau. voici un exemple:\n\n\n\n\n\n\n\n\n\nC’est le logo de Quarto. Donc vous vyez bien que cela se met sur l’autrecoté de la figure."
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#insertion-de-page-dans-un-fichier-quarto",
+    "href": "demo/qmd/quarto_pdf.html#insertion-de-page-dans-un-fichier-quarto",
+    "title": "Quarto-Document",
+    "section": "Insertion de page dans un fichier quarto:",
+    "text": "Insertion de page dans un fichier quarto:\nPour inserer une page dans un fichiier quarto la demarche est la suivante: ils suffit d’aller dans l’option Insert et de selectionner shortcode a l’interieur de duquel on doit mettre cette instruction"
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#inserer-des-notes-de-bas-de-page",
+    "href": "demo/qmd/quarto_pdf.html#inserer-des-notes-de-bas-de-page",
+    "title": "Quarto-Document",
+    "section": "Inserer des notes de bas de page:",
+    "text": "Inserer des notes de bas de page:\nIl suffit d’insérer des notes de bas de page juste après le mot concerné. Pour cela cliquez Insert - Footnote . Ainsi, Une sorte de nouvelle page apparait en bas avec le numéro du bas de page que vous insérez.\nPar exemple. Quarto est semblable a Rmarkdown1."
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#insertion-de-formule",
+    "href": "demo/qmd/quarto_pdf.html#insertion-de-formule",
+    "title": "Quarto-Document",
+    "section": "Insertion de formule",
+    "text": "Insertion de formule\nil est à noté que l’ensemble des formules saisi dans un fichier Quarto necessite l’utilisation de code latex. Quarto nous facilite son utilisation, en effet dans l’onglet Insert on a LaTEX Math nous permet e saisir du code pour les formules. par exemple, nous pouvons utiliser du inline Math ou du display math selon la strcture de notre formule :\nPar exemple:\n\n\nE=mC^2\n\\tag{1}\nInsérer des symboles ou emoji\nOn peut insérer les symboles dans Quarto en allant dans l’onglet Insert - Special Character - Insert Unicode ou encore Insert - special character - Insert Emoji\npar exemple\nje suis content😊\nInsérer des liens hypertextes\nOn peut insérer egalement des des liens hypertextes vers des équations ou encore vers un tableau, une figure ou encore des titres. Pour ce faire il faudra d’abord préciser dans attributs l’ID du titre, texte ou figure. Ensuite vous allez dans l’onglet Insert - Cross reference.\nAllez à Equation 1\nInsérer des notes\nSi nous voulons mettre en exergue quelque chose dans un document, nous pouvons le faire en insérant un note (callout) en précisant le type que nous voulons (Important, note...).\npar exemple:\n\n\n\n\n\n\nImportant\n\n\n\nA retenir\nCe texte est très important\n\n\n\n\n\n\n\n\nWarning\n\n\n\nNB:\nRevoyez votre comportement.\n\n\nInsérer des références bibliothèque\nPour insérer une citation tirée d’un document pendant que nous écrivons, nous devons connaitre le DOI de la source. Le DOI est un identifiant que chaque article en ligne a et c’est propre à cet article. Autrement, deux artciles ne peuvent pas avoir le mm DOI.\nPour ce faire une fois que nous avons écrit notre citation, pour la sourcer nous insérons le DOI du fichier dans Insert - Citation - DOI et nous ajoutons le DOI du fichier. Automatiquement il insère ce fichier dans notre référence bibligraphique en bas. Ainsi il est important d’insérer un titre référence après le document que nous écrivons.\nPar exmple\nLa vulgariation scientique est un prealable au developpement de l’Afrique [@coulombe2009].\nDiagrammes:\nNous avons la possibilité d’inclure des diagrammes sur un fichier Quarto. Cela necessite la maitrise de Mermaid et de Graphviz. Par exemple on a:\n::: {.cell}\n\n\n\nCode\nflowchart LR   \n    A[ISE1] --&gt; B(ISE2)  \n    B --&gt; C{ISE3}  \n    C --&gt; D[Evaluation d'impact]  \n    C --&gt; E[Finance]\n\n\n\n\n\n    flowchart LR   \n    A[ISE1] --&gt; B(ISE2)  \n    B --&gt; C{ISE3}  \n    C --&gt; D[Evaluation d'impact]  \n    C --&gt; E[Finance] \n\n\n\n\n\n\n:::\nceci est un exemple de diagramme fait avec mermaid.\nde me nous pouvons utiliser du graphViz pour nos diagrammes; voici un exemple de diagramme\n\n\nCode\ngraph G {\n  layout=neato\n  courir -- intr;\n  intr -- runbl;\n  runbl -- courir;\n  run -- noyau;\n  noyau -- zombie;\n  noyau -- dormir;\n  noyau -- runmem;\n  dormir -- swap;\n  swap -- runswap;\n  runswap -- nouveau;\n  runswap -- runmem;\n  nouveau -- runmem;\n  dormir -- runmem;\n  \n}\n\n\n\n\n\n\n\nG\n\n\n\ncourir\n\ncourir\n\n\n\nintr\n\nintr\n\n\n\ncourir--intr\n\n\n\n\nrunbl\n\nrunbl\n\n\n\nintr--runbl\n\n\n\n\nrunbl--courir\n\n\n\n\nrun\n\nrun\n\n\n\nnoyau\n\nnoyau\n\n\n\nrun--noyau\n\n\n\n\nzombie\n\nzombie\n\n\n\nnoyau--zombie\n\n\n\n\ndormir\n\ndormir\n\n\n\nnoyau--dormir\n\n\n\n\nrunmem\n\nrunmem\n\n\n\nnoyau--runmem\n\n\n\n\ndormir--runmem\n\n\n\n\nswap\n\nswap\n\n\n\ndormir--swap\n\n\n\n\nrunswap\n\nrunswap\n\n\n\nswap--runswap\n\n\n\n\nrunswap--runmem\n\n\n\n\nnouveau\n\nnouveau\n\n\n\nrunswap--nouveau\n\n\n\n\nnouveau--runmem\n\n\n\n\n\n\n\n\n\nCela vous montre à quel point Quarto regroupe une large gamme de fonctionalité que vous pourrez utiliser dans vos travail.\nEgalement il est possible d’ajouter des forme sur un fichier :\npar exemple nous pouvons utiliser la syntaxe suivante dans un div background: #2780e3; width: 350px; height: 350px; border-radius: 100px;\n\n\n\nEnfin, nous pouvons ajouter des notes à notre document Quarto en tilisant cette syntaxe:\n\n\n\n\n\n\nNote\n\n\n\nNous sommes ouvert à vos: recommendations, conseils et suggestions.\nMerci D’avoir pris du temps de visualiser cet document.\n\n\nCeci met fin a notre document, nous esperons que vous l’avez apprecié.😊"
+  },
+  {
+    "objectID": "demo/qmd/quarto_pdf.html#footnotes",
+    "href": "demo/qmd/quarto_pdf.html#footnotes",
+    "title": "Quarto-Document",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nle groupe sur Rmarkdown nous expliquera ce que designe reelement Rmarkdown↩︎"
+  },
+  {
+    "objectID": "overview/guide.html#rendering",
+    "href": "overview/guide.html#rendering",
+    "title": "Guide through Quarto",
+    "section": "Rendering",
+    "text": "Rendering\nTo render documents, there are several ways.\nOn R:\nTo render the document, we click on the render button. \nTo preview the document, we click on the visual button\n\nOn other editors:\nWe need to run these on the terminal:\nquarto preview (for preview)\nquarto render (for render)\nNow, fell free to see our work and all the code in the projects tab\nSee project files",
+    "crumbs": [
+      "Overview",
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Quarto",
+    "section": "",
+    "text": "This project is about explaining how does quarto works. Here, we describe precisely by examples and presentations how that works\n\nDescription of Quarto\n\n    It appears you don't have a PDF plugin for this browser.\n    No biggie... you can click here to\n    download the PDF file.\n\n\n\nBeamer presentation\n\n    It appears you don't have a PDF plugin for this browser.\n    No biggie... you can click here to\n    download the PDF file.\n\n\n\nPractice\nWell, you are looking at the practice part.\nPlease, also visit this link",
+    "crumbs": [
+      "Projects",
+      "Quarto"
+    ]
+  }
+]

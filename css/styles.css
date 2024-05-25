@@ -1,0 +1,209 @@
+/* css styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --red: hsl(348, 97%, 39%);
+    /*Primary*/
+    --peach: hsl(11, 73%, 66%);
+    --light-grayish-peach: hsl(14, 76%, 97%);
+    --black: hsl(270, 3%, 11%);
+    --white: hsl(0, 0%, 100%);
+    /*Secondary*/
+    --light-peach: hsl(11, 100%, 80%);
+    --dark-grey: hsl(264, 5%, 20%);
+    --light-grey: hsl(210, 17%, 95%);
+    --sidebar-bg: hsl(256, 86%, 17%);
+    --lighter-sidebar-bg: hsl(256, 40%, 40%);
+}
+
+@font-face {
+    font-family: Jost;
+    src: url(../fonts/Jost/Jost-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Open-sans;
+    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+body {
+    font-family: Jost;
+}
+
+#quarto-header {
+    box-shadow: 0 0 8px rgb(0,0,0,0.4);
+}
+
+.navbar-brand-container.mx-auto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand.navbar-brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-brand.navbar-brand-logo .navbar-logo {
+    object-fit: contain;
+}
+
+
+.navbar-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.quarto-title .title {
+    font-family: Lato;
+    font-size: 2.5rem;
+    color: var(--lighter-sidebar-bg);
+    letter-spacing: 2px;
+}
+
+.navbar.navbar-expand-lg {
+    background: var(--sidebar-bg);
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--lighter-sidebar-bg);
+    font-weight: 600;
+}
+
+#dedicated-to-quarto-programming {
+    font-size: 1.2rem;
+}
+
+.btns a.overview {
+    color: var(--white);
+    background: var(--lighter-sidebar-bg);
+    border: 2px solid var(--lighter-sidebar-bg);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.btns a.overview:hover {
+    color: var(--lighter-sidebar-bg);
+    background: none;
+}
+
+
+.btns a.projects {
+    color: var(--white);
+    background: var(--dark-grey);
+    border: 2px solid var(--dark-grey);
+    font-weight: 400;   
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btns a.projects:hover {
+    background: grey;
+    border-color: grey;
+}
+
+
+#purpose {
+    font-size: 1.2rem;
+}
+
+.sidebar-item-text.sidebar-link.active {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--lighter-sidebar-bg);
+    padding: 8px 0;
+    width: 100%;
+}
+
+
+.sidebar-item-text.sidebar-link {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.img_2 {
+    border: 1px solid var(--black);
+}
+
+.special_p {
+    font-size: 1.2rem;
+    color: var(--lighter-sidebar-bg);
+}
+
+.illu-containers a.illu-container .img-illu {
+    width: 160px;
+    height: 160px;
+    margin: 10px;
+}
+
+.illu-containers {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.illu-containers a.illu-container {
+    display: block;
+}
+
+.illu-containers a.illu-container .text {
+    text-align: center;
+}
+
+.img-illu-quarto {
+    width: 100%;
+}
+
+a.guide {
+    color: var(--white);
+    background: var(--lighter-sidebar-bg);
+    border: 2px solid var(--lighter-sidebar-bg);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+a.guide:hover {
+    color: var(--lighter-sidebar-bg);
+    background: none;
+}
+
+
+
+

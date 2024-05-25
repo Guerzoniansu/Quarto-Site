@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Document rédigé par Yatabare Cheikna Amala">
+<meta name="dcterms.date" content="2024-05-25">
+
+<title>Acme - Quarto-Document</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../.././logo/logo.ico" alt="Acme" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Acme</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../overview.html"> 
+<span class="menu-text">Overview</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../help.html"> 
+<span class="menu-text">Help</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-facebook"></i></a>
+    <a href="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/Guerzoniansu/Quarto">
+            Source code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="">
+            Report a bug
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction:</a>
+  <ul class="collapse">
+  <li><a href="#quest-ce-que-quarto" id="toc-quest-ce-que-quarto" class="nav-link" data-scroll-target="#quest-ce-que-quarto"><strong>Qu’est ce que Quarto?</strong></a></li>
+  <li><a href="#avantage-de-quarto" id="toc-avantage-de-quarto" class="nav-link" data-scroll-target="#avantage-de-quarto"><strong>Avantage de Quarto</strong></a></li>
+  <li><a href="#modèle-de-sortie-dun-document-quarto" id="toc-modèle-de-sortie-dun-document-quarto" class="nav-link" data-scroll-target="#modèle-de-sortie-dun-document-quarto"><strong>Modèle de sortie d’un document Quarto</strong></a></li>
+  <li><a href="#mettre-du-code-dans-un-fichier-quarto" id="toc-mettre-du-code-dans-un-fichier-quarto" class="nav-link" data-scroll-target="#mettre-du-code-dans-un-fichier-quarto"><strong>Mettre du code dans un fichier Quarto</strong></a></li>
+  <li><a href="#installation-de-quarto" id="toc-installation-de-quarto" class="nav-link" data-scroll-target="#installation-de-quarto"><strong>Installation de Quarto</strong></a></li>
+  </ul></li>
+  <li><a href="#utilisation-de-quarto" id="toc-utilisation-de-quarto" class="nav-link" data-scroll-target="#utilisation-de-quarto">Utilisation de Quarto:</a>
+  <ul class="collapse">
+  <li><a href="#description-de-lenvironnement-de-quarto" id="toc-description-de-lenvironnement-de-quarto" class="nav-link" data-scroll-target="#description-de-lenvironnement-de-quarto"><strong>Description de l’environnement de Quarto</strong></a></li>
+  <li><a href="#description-du-yamlen-tete-dun-fichier-quarto" id="toc-description-du-yamlen-tete-dun-fichier-quarto" class="nav-link" data-scroll-target="#description-du-yamlen-tete-dun-fichier-quarto"><strong>Description du YAML(En tete d’un fichier quarto)</strong></a></li>
+  <li><a href="#presentation-des-chunks-codes" id="toc-presentation-des-chunks-codes" class="nav-link" data-scroll-target="#presentation-des-chunks-codes"><strong>Presentation des chunks codes</strong></a></li>
+  <li><a href="#numerotation-des-sections" id="toc-numerotation-des-sections" class="nav-link" data-scroll-target="#numerotation-des-sections"><strong>Numerotation des sections:</strong></a></li>
+  <li><a href="#insertion-dimage" id="toc-insertion-dimage" class="nav-link" data-scroll-target="#insertion-dimage"><strong>Insertion d’image :</strong></a></li>
+  <li><a href="#insertion-de-liens-url-etc." id="toc-insertion-de-liens-url-etc." class="nav-link" data-scroll-target="#insertion-de-liens-url-etc.">Insertion de Liens (Url, etc.)</a></li>
+  <li><a href="#insertion-de-tableau" id="toc-insertion-de-tableau" class="nav-link" data-scroll-target="#insertion-de-tableau"><strong>Insertion de tableau:</strong></a></li>
+  </ul></li>
+  <li><a href="#personnalisation-du-document" id="toc-personnalisation-du-document" class="nav-link" data-scroll-target="#personnalisation-du-document">Personnalisation du document</a>
+  <ul class="collapse">
+  <li><a href="#insertion-de-page-dans-un-fichier-quarto" id="toc-insertion-de-page-dans-un-fichier-quarto" class="nav-link" data-scroll-target="#insertion-de-page-dans-un-fichier-quarto">Insertion de page dans un fichier quarto:</a></li>
+  <li><a href="#inserer-des-notes-de-bas-de-page" id="toc-inserer-des-notes-de-bas-de-page" class="nav-link" data-scroll-target="#inserer-des-notes-de-bas-de-page">Inserer des notes de bas de page:</a></li>
+  <li><a href="#insertion-de-formule" id="toc-insertion-de-formule" class="nav-link" data-scroll-target="#insertion-de-formule">Insertion de formule</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="quarto_pdf.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="quarto_pdf.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quarto-Document</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Document rédigé par Yatabare Cheikna Amala </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 25, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div style="page-break-after: always;"></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/th (2).jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="895"></p>
+</figure>
+</div>
+<div style="page-break-after: always;"></div>
+<section id="introduction" class="level1">
+<h1>Introduction:</h1>
+<section id="quest-ce-que-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quest-ce-que-quarto"><strong>Qu’est ce que Quarto?</strong></h2>
+<p>Quarto est un package de R developpé dans le but de produire des presentations, des rapports et des documents sous forme de fichier world, pdf ou html. De meme, elle a la possibilité de produire des presentations sous forme de fichier powerpoint(pptx). Ce package est une exetension du Rmarkdown que nous connaissons tous et qui est utilisé pour faire des documents. A la seule diffrence que Quarto est plus smart et facile à utilisé. nous n’utiliserons pratiquement pas de balise comme c’est le cas dans Rmarkdown pour les titres pour ne citer que cela. Nous vous invitons à suivre attentivement ce recapitulatif de Quarto que nous avons pris le temps de parfaire et esperons que quarto vous sera utile dans votre travail.</p>
+</section>
+<section id="avantage-de-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="avantage-de-quarto"><strong>Avantage de Quarto</strong></h2>
+<p>Tout comme Rmarkdown, Quarto a les memes fonctionnalités que Rmarkdown. En effet elle peut faire tout ce que Rmarkdown peut faire en allant de la generation des documents de qualité à de magnifiques presentation powerpoint. Son avantage par rapport à Rmarkdown reside dans sa facilité d’utilisation. Elle ne necessite pas la maitrise des differentes syntaxes d’ecriture comme le necessiterait Rmarkdown. On peut meme le comparer à l’ecriture d’un fichier sur microsoft office word à la seule difference qu’elle inclut l’utilisation de code que ce soit sur R, python, sql…</p>
+</section>
+<section id="modèle-de-sortie-dun-document-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="modèle-de-sortie-dun-document-quarto"><strong>Modèle de sortie d’un document Quarto</strong></h2>
+<p>Quarto nous propose plusieurs modèle de sortie pour nos documents. En effet nous pouvons generer des documents sous format world, powerpoint, html, powerpoint. Elle nous offre une large game de document sous plusieurs extensions.</p>
+</section>
+<section id="mettre-du-code-dans-un-fichier-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="mettre-du-code-dans-un-fichier-quarto"><strong>Mettre du code dans un fichier Quarto</strong></h2>
+<p>Tout comme Rmarkdown, nous avons la possibilité d’inclure un grand nombre de zone pour inclure du code. En effet on appelle ces zones des chunks: Ces zones grisatres nous premettent d’inclure du code R, python, Sql, CSS, JAVA…</p>
+<p>l’utilisation de R est definie par defaut dans les chunks, donc nous n’avons pas besoin de packages specifiques pour pouvoir l’utiliser. Cependant à la difference des autres languages, elle necessite l’installation de certains packages par exemple dans le cas de python, il est necessaire d’installer le package reticulate pour pouvoir l’utiliser.</p>
+</section>
+<section id="installation-de-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="installation-de-quarto"><strong>Installation de Quarto</strong></h2>
+<p>Pour installer Quarto, il vous suffit de <code>l'installer</code> à partir de packages en installant Quarto directement à partir du CRAN.</p>
+<p>Si celà ne fonctionne pas, il suffit de reinstaller R et Rstudio et de reprendre la procedure. Apres quoi, vous pouvez maintenat l’installer à partir de de la fonction <strong>library(quarto).</strong> Enfin à partir de l’onglet file, vous avez accès à Quarto pour l’utiliser pleinement.</p>
+</section>
+</section>
+<section id="utilisation-de-quarto" class="level1">
+<h1>Utilisation de Quarto:</h1>
+<section id="description-de-lenvironnement-de-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="description-de-lenvironnement-de-quarto"><strong>Description de l’environnement de Quarto</strong></h2>
+<p>Le document Quarto comprend 3 parties que sont <strong><code>l’en-tête (YAML)</code></strong><code>, le texte et les blocs de codes</code> tous les trois forment le corps du document. Dans l’en-tete sont précisés des formats additionnels pour le document (Table de matières, références s’il y en a, des packages Latex à inclure si possible).</p>
+<p>Quelques astcuces que vous pouvez utilisez pour le corps du devoir:</p>
+<ol type="1">
+<li><p><strong>Insertion des titres</strong></p>
+<p>Pour insérer un nouveau titre, nous utilisons sur la barre, l’onglet <strong><code>Normal</code></strong>. En effet, nous avons à l’interieur de cet onglet, plusieurs niveaux de titre que nous pourrons utiliser pour rendre plus esthetique nos presentations. nous avons jusqu’a 6 titres que nous pourrons utiliser.</p>
+<p><strong>Titre 1: niveau 1</strong></p>
+<p><strong>Titre 2: niveau 2</strong></p>
+<p><strong>Titre 3: niveau 3</strong></p>
+<p><strong>Titre 4: niveau 4</strong></p>
+<p><strong>Titre 5: niveau 5</strong></p>
+<p><strong>Titre 6: niveau 6</strong></p>
+<p>par defaut le texte est sous format <code>Normal</code></p></li>
+<li><p><strong>Style du texte</strong></p></li>
+</ol>
+<p>Pour écrire le texte en gras il suffit d’appuyer sur la touche <strong><code>B</code></strong> qui se trouve sur la barre, ou on peut appyer sur format pour l’obtenir (c’est ecrit B Bold).</p>
+<p>Pour écrire le texte en Italique il suffit d’appuyer sur la touche <strong><code>I</code></strong> qui se trouve sur la barre, ou on peut appyer sur format pour l’obtenir (c’est ecrit I Italique).</p>
+<p>Pour écrire le texte en Italique et en Gras il suffit d’appuyer sur la touche <strong><code>I</code></strong> et <strong><code>G</code></strong> qui se trouve sur la barre, ou on peut appyer sur format pour l’obtenir (c’est ecrit I Italique et G Bold).</p>
+<p>Pour souligner un texte, il suffit d’aller dans l’onglet Format et d’appuyer sur <u><strong><code>U</code></strong></u> (Underline).</p>
+<p>Pour barrer un texte, il suffit d’allez dans l’onglet Format et au niveau de <code>Texte</code> on appuie sur <code>Strickout.</code></p>
+<p>Pour mettre un mot en exposant, il suffit d’aller dans Format et au niveau de <code>Texte</code> on appuie sur <code>Superscript</code></p>
+<p>Pour mettre un mot en indice, il suffit d’aller dans Format et au niveau de <code>Texte</code> on appuie sur <code>Subscript.</code></p>
+<p>Pour mettre un mot en majuscule ou en miniscule selon le format ou il initialement ecrit , il suffit d’aller dans Format et au niveau de <code>Texte</code> on appuie sur <code>Small Caps</code><strong>.</strong></p>
+<ol start="3" type="1">
+<li><p><strong>Mise en couleur</strong></p>
+<p>Pour les mises en couleur, il faudra une maitrîse du langage CSS. Par exemple supposons que nous voulons metrre le texte suivant:&nbsp;<code>Je suis a l'ENSAE</code>&nbsp;en vert, je sélectionne d’abord mon texte , ensuite je vais dans&nbsp;<code>Format ⟹ Div</code>&nbsp;et dans l’attribut&nbsp;<code>CSS Style</code>&nbsp;je précise mon code pour la couleur. Cependant il peut arriver que je veuilles que seul mon texte&nbsp;<code>Etudiant</code>&nbsp;soit en vert. Là je fais la même chose mais au lieu d’insérer une div, j’insère un span.</p>
+<p>comme illustration de ce qui a été dit</p>
+<div style="color: green;">
+<p>Je suis a l’ENSAE.</p>
+</div>
+<p>pour mettre uniquement un element du texte en couleur on peut utilise la meme methode juste qu’ a la difference on met un spam</p>
+<p>par exemple</p>
+<div style="color: red;">
+<p>Etudiant</p>
+</div></li>
+<li><p><strong>Bordure de texte</strong></p>
+<p>pour encadrer un texte, il faut egalement utilisé du css. On peut encadrer tout le texte ou une partie du texte.</p>
+<p>comme illustration de ce qui a été dit:</p></li>
+</ol>
+<div style="border: 1px solid yellow; padding: 10px;">
+<p>Je suis à l’ENSAE de Dakar</p>
+</div>
+<ol start="5" type="1">
+<li><p>Mise en forme (positionnement de texte):</p>
+<p>Pour la position du texte (centrée, justifié, à droite ou à gauche)nous utilisont du code CSS. Nous utilisons les elements suivants:</p>
+<p>pour centrer un texte on utilise <code>text-align; center;</code></p></li>
+</ol>
+<div style="text-align: center;">
+<p>Texte Centré : je suis en ISE1 Eco</p>
+</div>
+<p>Pour mettre le texte à gauche nous utilisons: t<code>ext-align; left;</code></p>
+<div style="text-align: left;">
+<p>Text Centrée à gauche Je suis en ISE1 math</p>
+</div>
+<p>Pour mettre le texte à droite nous utilisons: <code>text-align; right;</code></p>
+<div style="text-align: right;">
+<p>Je suis en ISE1 Cycle long</p>
+</div>
+</section>
+<section id="description-du-yamlen-tete-dun-fichier-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="description-du-yamlen-tete-dun-fichier-quarto"><strong>Description du YAML(En tete d’un fichier quarto)</strong></h2>
+<p>Pour definir le titre dans l’entete, il suffit de mettre <code>Title: "Nom du document"</code></p>
+<p>Pour definir le sous titre dans l’entete, il suffit de mettre Subtitle: “Sous titre”</p>
+<p>Pour definir les auteurs dans l’entete, il suffit de mettre Authors: <code>"YATABARE-Hamid-Sadibou-Maty"</code></p>
+<p>Pour definir la date dans l’entete, il suffit de mettre <strong>date: 14/03/2024</strong></p>
+<p>Pour definir la table de matiere dans l’entete, il suffit de mettre</p>
+<p><strong>Output:</strong></p>
+<blockquote class="blockquote">
+<p><strong>html_document:</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>pour mettre une table de matiere</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>toc : true</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Pour mettre des numeros de lignes</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>number_sections:true</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Pour avoir une table de matieres flottantes</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>toc-float: true</strong></p>
+<p><strong>toc-title:</strong> pour le titre de la table de matière</p>
+<p><strong>lof:</strong> pour afficher la liste des figures</p>
+<p><strong>lot:</strong> pour afficher la liste des tableau.</p>
+<p><strong>code-line-numbers:</strong> pour afficher le numero de ligne dans les blocks de code.</p>
+</blockquote>
+<p>Pour la sortie du document, on peut decider d’afficher le document avec les codes et les erreurs ou pas. Pour ne pas les afficher, on peut proceder de la sorte:</p>
+<blockquote class="blockquote">
+<p><strong>execute:</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>echo:</strong> false</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>warning:</strong> false</p>
+</blockquote>
+<p>De meme on a la possibilité d’inclure le code avec les resulats ou pas:</p>
+<p>on le fait de la sorte:</p>
+<p><strong>include</strong> : TRUE/FALSE</p>
+<p><strong>output</strong> : false/true pour afficher les resulats des chunks ou pas.</p>
+<p><strong>include-before-body :</strong> pour afficher la table de matiere au debut du fichier.</p>
+<p><strong>include-after-body</strong> : pour afficher la table de matiere enfin du fichier.</p>
+<p><strong>code-fold: true</strong> pour afficher un zone d’affichage du code quand on veut ou pas. cela est possible uniquement avec les fichier avec des sortie html.</p>
+<p>l’instruction ci-dessous permet de generer les 3 fichiers à savoir html, pdf, word directement à partir du YAML.</p>
+<p><strong>format:</strong></p>
+<p><strong>html:</strong></p>
+<div class="line-block"><strong>code-fold: true</strong></div>
+<div class="line-block"><strong>html-math-method: katex</strong></div>
+<p><strong>pdf:</strong></p>
+<p><strong>geometry:</strong></p>
+<div class="line-block"><strong>-top=30mm</strong></div>
+<div class="line-block"><strong>- left=30mm</strong><br>
+</div>
+<p><strong>docx: default</strong></p>
+<p>pour donner un aspect esthetique a votre sortie pour les codes vous pouvez utiliser egalement le code suivant :</p>
+<p>highlight-style: github</p>
+<p>cela permet de donner un sortie beaucoup plus jolie a votre document</p>
+</section>
+<section id="presentation-des-chunks-codes" class="level2">
+<h2 class="anchored" data-anchor-id="presentation-des-chunks-codes"><strong>Presentation des chunks codes</strong></h2>
+<p>Quarto dispose d’une large game de chunk pour different format de langage: nous vous presenterons la forme de certains langage de programmation couramment utilisé sur des fichiers Quarto</p>
+<blockquote class="blockquote">
+<p>Pour les codes R, l’affichage est le suivant:</p>
+</blockquote>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris ,<span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Sepal.Width))<span class="sc">+</span>          </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="quarto_pdf_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Donc nous avons la possibilité de realiser des graphiques et de faire tous ce que l’on pouvait faire d’habitude sur R.</p>
+<blockquote class="blockquote">
+<p>Pour les codes python nous pouvons proceder de la sorte:</p>
+</blockquote>
+<p>nous avons au niveau de la barre des onglets <strong>Insert</strong> et on appuie sur <strong>Excecutive Cell</strong> a partir de la nous pouvons choisir python pour obtenir un chunk python. Mais bien avant, il faudra avoir installer le package <strong>reticulate</strong>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):   </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+</div>
+</div>
+<p>Donc vous voyez deja que l’on peut faire du python sur R. il est possible pour nos travaux d’utiliser les modules pandas ou numpy selon le travail que l’on aimerait faire.</p>
+<p>Quarto dispose d’une possibilité d’inclure plusieurs langage a partir de cette commande que voici: <strong>code block.</strong> On peut l’obtenir à partir de <strong>insert</strong> et on appuie sur code block. A partir de cela, on met le langage de programmation que l’on souhaite utiliser bien sur en ayant le package necessaire pour l’utiliser sur R.</p>
+<blockquote class="blockquote">
+<h2 id="etablir-une-table-de-matière" class="anchored">Etablir une table de matière:</h2>
+</blockquote>
+<p>Cela se fait au niveau dU YAML. Nous y avons donnée en detail tous les éléments de comment cela se passe dans la section YAML.</p>
+</section>
+<section id="numerotation-des-sections" class="level2">
+<h2 class="anchored" data-anchor-id="numerotation-des-sections"><strong>Numerotation des sections:</strong></h2>
+<p>Pour creer une numeration sur quarto, il suffit d’aller au niveau de <code>Format</code> et à l’interieur on à l’onglet <code>Bullet et Numbering</code> qui permet de creer des listes. Ces listes peuvent etre ordonnées ou non selon ce que l’on veut faire. par exemple:</p>
+<ul>
+<li><p>Yatabare</p></li>
+<li><p>Hamib</p></li>
+<li><p>Sadibou</p></li>
+<li><p>Maty</p>
+<p>liste non ordonnée</p>
+<p>Ou on peut proceder par numerotation:</p></li>
+</ul>
+<ol type="1">
+<li><p>Maty</p></li>
+<li><p>Sadibou</p></li>
+<li><p>Hamib</p></li>
+<li><p>Yatabare</p>
+<p>liste ordonnée</p></li>
+</ol>
+</section>
+<section id="insertion-dimage" class="level2">
+<h2 class="anchored" data-anchor-id="insertion-dimage"><strong>Insertion d’image :</strong></h2>
+<p>Pour inserer une image dans un fichier Quarto, il suffit d’appuyer sur l’onglet <strong>Insert</strong> situé sur la barre des taches et de selectionner <strong>Figure/image.</strong> A partir de cette commande, vous aurez la possibilité d’inclure tout les types de fichier dont vous aurez envie que ce soit de jpeg on du png.</p>
+<p>Par exemple pour du jpeg:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/carte-departements-senegal.jpg" class="img-fluid figure-img"></p>
+<figcaption><code>carte du senegal</code></figcaption>
+</figure>
+</div>
+<p>Vous avez egalement la possibilité de donner un titre à vos images. En effet en voulant l’inserer vous avons <code>caption</code> qui vous permet de mettre le titre de vos images.</p>
+<p>Maintenant il peut arriver qu’on veuille insérer deux image l’une à coté de l’autre et non l’une après l’autre. Pour cela, nous devons insérer d’abord une div et préciser dans son attribut other que notre div contient 2 colonnes par&nbsp;<code>layout-ncol= 2</code></p>
+<p>En voici un exemple</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/th (2).jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/clipboard-2025706921.jpeg" class="img-fluid" alt="Erreur"></p>
+</div>
+</div>
+</div>
+<div>
+<p>{layout-ncol =” 2” fig-align=“left”}</p>
+</div>
+<p>De meme, on peut positionner l’image que nous voulons que ce soit à gauche, à droite ou au milieu. Cela s’effectue toujours à partir de figure ou on peut selectionner l’option qui nous convient.</p>
+<p>Egalement au lieu de telecharger le fichier on peut inclure le lien(URL) du fichier si celui ci se trouve sur internet. Toujours cela se passe toujour de la meme facon que le telechargement juste qu’il faut inclure l’URL à la place de l’image.</p>
+<p>Aussi nous avons la possibilité d’inserer 2 ou plusieur images l’un à coté de l’autre. Cela se fait de cette manière:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra) </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plot1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist, <span class="at">color =</span> <span class="st">"blue"</span>)) <span class="sc">+</span>  </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)  </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plot2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist, <span class="at">color =</span> <span class="st">"yellow"</span>)) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span> (<span class="at">alpha =</span> <span class="fl">0.5</span>) </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(plot1, plot2, <span class="at">ncol =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="quarto_pdf_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="insertion-de-liens-url-etc." class="level2">
+<h2 class="anchored" data-anchor-id="insertion-de-liens-url-etc.">Insertion de Liens (Url, etc.)</h2>
+<p>Pour mettre un lien dans un fichier Quarto, la methode est simple, il faudra aller dans <code>Insert</code>. sur la base des onglets et selectionner <code>link</code> .Ensuite mettre le lien et préciser le texte à afficher et sur lequel cliquer pour avoir la page. Voici un exemple:</p>
+<p><a href="https://quarto.org/docs/tools/vscode.html">Utiliser Quarto sur VScode</a></p>
+<p>sur Ce lien, il est expliqué comment utiliser directement quarto sur VScode pour ceux et celle qui voudront l’utiliser. A la difference de Rstudio, elle utilise d’autres commande.</p>
+</section>
+<section id="insertion-de-tableau" class="level2">
+<h2 class="anchored" data-anchor-id="insertion-de-tableau"><strong>Insertion de tableau:</strong></h2>
+<ul>
+<li><p>pour inserer des tableaux dans un fichier Quarto, la methode est simple. Il suffit de selectionner <code>Table</code> qui se trouve au dessus sur la barre des onglets. Ainsi, Quarto vous offre la possibilité de choisir le nombre de lignes et de colonnes selon notre convenance. Par exemple , pour creer un tableau de 2 lignes et de 2 colonnes. On peut proceder ainsi:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Variables</th>
+<th style="text-align: center;">effectifs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sexe</td>
+<td style="text-align: center;">masculin; feminin</td>
+</tr>
+<tr class="even">
+<td>age</td>
+<td style="text-align: center;">0 à 21 ans</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<p>autres exemple, nous pouvons donner un tableau à 4 lignes et 1 colonnes:</p>
+<p>nous pouvons egalement decider de placer le tableau à gauche, a droite, ou au milieu. On peut le faire avec l’option <code>Table</code> et ensuite on selectionne <code>align column</code> et on choisit l’option selon notre travail.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Ensae</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">ISE1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ISEP3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AS1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ISE2</td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Nom</th>
+<th>prenom</th>
+<th>classe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NGOM</td>
+<td>Sadibou</td>
+<td>ISE1</td>
+</tr>
+<tr class="even">
+<td>Kone</td>
+<td>Chaka</td>
+<td>ISE1</td>
+</tr>
+<tr class="odd">
+<td>Sangare</td>
+<td>Gnaleen</td>
+<td>ISE1</td>
+</tr>
+</tbody>
+</table>
+<p>Supposons mainteant que l’on veuille commenter le tableau mais que le commentaire se trouve à gauche du tableau. On place alors dans notre précédente div un texte à la place du deuxième tableau. voici un exemple:</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/th (2).jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>C’est le logo de Quarto. Donc vous vyez bien que cela se met sur l’autrecoté de la figure.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="personnalisation-du-document" class="level1">
+<h1>Personnalisation du document</h1>
+<section id="insertion-de-page-dans-un-fichier-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="insertion-de-page-dans-un-fichier-quarto">Insertion de page dans un fichier quarto:</h2>
+<p>Pour inserer une page dans un fichiier quarto la demarche est la suivante: ils suffit d’aller dans l’option <code>Insert</code> et de selectionner <code>shortcode</code> a l’interieur de duquel on doit mettre cette instruction <code></code></p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="inserer-des-notes-de-bas-de-page" class="level2">
+<h2 class="anchored" data-anchor-id="inserer-des-notes-de-bas-de-page">Inserer des notes de bas de page:</h2>
+<p>Il suffit d’insérer des notes de bas de page juste après le mot concerné. Pour cela cliquez <code>Insert - Footnote</code> . Ainsi, Une sorte de nouvelle page apparait en bas avec le numéro du bas de page que vous insérez.</p>
+<p>Par exemple. Quarto est semblable a Rmarkdown<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+</section>
+<section id="insertion-de-formule" class="level2">
+<h2 class="anchored" data-anchor-id="insertion-de-formule">Insertion de formule</h2>
+<p>il est à noté que l’ensemble des formules saisi dans un fichier Quarto necessite l’utilisation de code latex. Quarto nous facilite son utilisation, en effet dans l’onglet <strong>Insert</strong> on a <strong>LaTEX Math</strong> nous permet e saisir du code pour les formules. par exemple, nous pouvons utiliser du inline Math ou du display math selon la strcture de notre formule :</p>
+<p>Par exemple:</p>
+<ol type="1">
+<li><p><span id="eq-lorenz"><span class="math display">
+E=mC^2
+\tag{1}</span></span></p>
+<h2 id="insérer-des-symboles-ou-emoji" class="anchored">Insérer des symboles ou emoji</h2>
+<p>On peut insérer les symboles dans Quarto en allant dans l’onglet <code>Insert - Special Character - Insert Unicode</code> ou encore <code>Insert - special character - Insert Emoji</code></p>
+<p>par exemple</p>
+<p>je suis content😊</p>
+<h2 id="emoji" class="anchored">Insérer des liens hypertextes</h2>
+<p>On peut insérer egalement des des liens hypertextes vers des équations ou encore vers un tableau, une figure ou encore des titres. Pour ce faire il faudra d’abord préciser dans attributs l’ID du titre, texte ou figure. Ensuite vous allez dans l’onglet <code>Insert - Cross reference</code>.</p>
+<p>Allez à <a href="#eq-lorenz" class="quarto-xref">Equation&nbsp;1</a></p>
+<h2 id="insérer-des-notes" class="anchored">Insérer des notes</h2>
+<p>Si nous voulons mettre en exergue quelque chose dans un document, nous pouvons le faire en insérant un note <code>(callout)</code> en précisant le type que nous voulons <code>(Important, note...).</code></p>
+<p>par exemple:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>A retenir</strong></p>
+<p>Ce texte est très important</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>NB:</strong></p>
+<p>Revoyez votre comportement.</p>
+</div>
+</div>
+<h2 id="insérer-des-références-bibliothèque" class="anchored">Insérer des références bibliothèque</h2>
+<p>Pour insérer une citation tirée d’un document pendant que nous écrivons, nous devons connaitre le DOI de la source. Le DOI est un identifiant que chaque article en ligne a et c’est propre à cet article. Autrement, deux artciles ne peuvent pas avoir le mm DOI.</p>
+<p>Pour ce faire une fois que nous avons écrit notre citation, pour la sourcer nous insérons le DOI du fichier dans <code>Insert - Citation - DOI</code> et nous ajoutons le DOI du fichier. Automatiquement il insère ce fichier dans notre référence bibligraphique en bas. Ainsi il est important d’insérer un titre référence après le document que nous écrivons.</p>
+<p>Par exmple</p>
+<p>La vulgariation scientique est un prealable au developpement de l’Afrique <span class="citation" data-cites="coulombe2009">[@coulombe2009]</span>.</p>
+<h2 id="diagrammes" class="anchored">Diagrammes:</h2>
+<p>Nous avons la possibilité d’inclure des diagrammes sur un fichier Quarto. Cela necessite la maitrise de Mermaid&nbsp;et de&nbsp;Graphviz. Par exemple on a:</p>
+<p>::: {.cell}</p></li>
+</ol>
+<div class="cell" data-layout-align="default">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>flowchart LR   </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    A[ISE1] --&gt; B(ISE2)  </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    B --&gt; C{ISE3}  </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    C --&gt; D[Evaluation d'impact]  </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    C --&gt; E[Finance]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">    flowchart LR   
+    A[ISE1] --&gt; B(ISE2)  
+    B --&gt; C{ISE3}  
+    C --&gt; D[Evaluation d'impact]  
+    C --&gt; E[Finance] 
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<pre><code>:::</code></pre>
+<p>ceci est un exemple de diagramme fait avec mermaid.</p>
+<p>de me nous pouvons utiliser du graphViz pour nos diagrammes; voici un exemple de diagramme</p>
+<div class="cell" data-layout-align="default">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode dot code-with-copy"><code class="sourceCode dot"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="va">graph</span> <span class="va">G</span> <span class="ot">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">layout</span><span class="ot">=</span><span class="va">neato</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">courir</span><span class="co"> -- </span><span class="va">intr</span><span class="ot">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">intr</span><span class="co"> -- </span><span class="va">runbl</span><span class="ot">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">runbl</span><span class="co"> -- </span><span class="va">courir</span><span class="ot">;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">run</span><span class="co"> -- </span><span class="va">noyau</span><span class="ot">;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">noyau</span><span class="co"> -- </span><span class="va">zombie</span><span class="ot">;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">noyau</span><span class="co"> -- </span><span class="va">dormir</span><span class="ot">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">noyau</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">dormir</span><span class="co"> -- </span><span class="va">swap</span><span class="ot">;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">swap</span><span class="co"> -- </span><span class="va">runswap</span><span class="ot">;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">runswap</span><span class="co"> -- </span><span class="va">nouveau</span><span class="ot">;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">runswap</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">nouveau</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">  </span><span class="va">dormir</span><span class="co"> -- </span><span class="va">runmem</span><span class="ot">;</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">  </span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="ot">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<svg width="672" height="480" viewbox="0.00 0.00 371.30 336.41" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 332.41)">
+<title>G</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-332.41 367.3,-332.41 367.3,4 -4,4"></polygon>
+<!-- courir -->
+<g id="node1" class="node">
+<title>courir</title>
+<ellipse fill="none" stroke="black" cx="264.09" cy="-309.93" rx="34.19" ry="18"></ellipse>
+<text text-anchor="middle" x="264.09" y="-305.73" font-family="Times,serif" font-size="14.00">courir</text>
+</g>
+<!-- intr -->
+<g id="node2" class="node">
+<title>intr</title>
+<ellipse fill="none" stroke="black" cx="336.3" cy="-310.41" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="336.3" y="-306.21" font-family="Times,serif" font-size="14.00">intr</text>
+</g>
+<!-- courir&#45;&#45;intr -->
+<g id="edge1" class="edge">
+<title>courir--intr</title>
+<path fill="none" stroke="black" d="M298.51,-310.16C301.99,-310.18 305.5,-310.21 308.9,-310.23"></path>
+</g>
+<!-- runbl -->
+<g id="node3" class="node">
+<title>runbl</title>
+<ellipse fill="none" stroke="black" cx="300.69" cy="-248" rx="31.34" ry="18"></ellipse>
+<text text-anchor="middle" x="300.69" y="-243.8" font-family="Times,serif" font-size="14.00">runbl</text>
+</g>
+<!-- intr&#45;&#45;runbl -->
+<g id="edge2" class="edge">
+<title>intr--runbl</title>
+<path fill="none" stroke="black" d="M326.57,-293.35C321.63,-284.69 315.63,-274.19 310.65,-265.47"></path>
+</g>
+<!-- runbl&#45;&#45;courir -->
+<g id="edge3" class="edge">
+<title>runbl--courir</title>
+<path fill="none" stroke="black" d="M290.49,-265.25C285.5,-273.7 279.5,-283.85 274.49,-292.34"></path>
+</g>
+<!-- run -->
+<g id="node4" class="node">
+<title>run</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-59.67" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-55.47" font-family="Times,serif" font-size="14.00">run</text>
+</g>
+<!-- noyau -->
+<g id="node5" class="node">
+<title>noyau</title>
+<ellipse fill="none" stroke="black" cx="101.02" cy="-90.65" rx="34.77" ry="18"></ellipse>
+<text text-anchor="middle" x="101.02" y="-86.45" font-family="Times,serif" font-size="14.00">noyau</text>
+</g>
+<!-- run&#45;&#45;noyau -->
+<g id="edge4" class="edge">
+<title>run--noyau</title>
+<path fill="none" stroke="black" d="M50.01,-69.31C57.57,-72.47 66.03,-76.01 73.86,-79.29"></path>
+</g>
+<!-- zombie -->
+<g id="node6" class="node">
+<title>zombie</title>
+<ellipse fill="none" stroke="black" cx="133.57" cy="-18" rx="39.42" ry="18"></ellipse>
+<text text-anchor="middle" x="133.57" y="-13.8" font-family="Times,serif" font-size="14.00">zombie</text>
+</g>
+<!-- noyau&#45;&#45;zombie -->
+<g id="edge5" class="edge">
+<title>noyau--zombie</title>
+<path fill="none" stroke="black" d="M108.9,-73.06C113.98,-61.73 120.56,-47.03 125.65,-35.68"></path>
+</g>
+<!-- dormir -->
+<g id="node7" class="node">
+<title>dormir</title>
+<ellipse fill="none" stroke="black" cx="82.25" cy="-163.45" rx="37.14" ry="18"></ellipse>
+<text text-anchor="middle" x="82.25" y="-159.25" font-family="Times,serif" font-size="14.00">dormir</text>
+</g>
+<!-- noyau&#45;&#45;dormir -->
+<g id="edge6" class="edge">
+<title>noyau--dormir</title>
+<path fill="none" stroke="black" d="M96.38,-108.65C93.49,-119.85 89.79,-134.2 86.9,-145.41"></path>
+</g>
+<!-- runmem -->
+<g id="node8" class="node">
+<title>runmem</title>
+<ellipse fill="none" stroke="black" cx="154.94" cy="-145.86" rx="43.44" ry="18"></ellipse>
+<text text-anchor="middle" x="154.94" y="-141.66" font-family="Times,serif" font-size="14.00">runmem</text>
+</g>
+<!-- noyau&#45;&#45;runmem -->
+<g id="edge7" class="edge">
+<title>noyau--runmem</title>
+<path fill="none" stroke="black" d="M116.9,-106.92C123.74,-113.92 131.72,-122.09 138.61,-129.14"></path>
+</g>
+<!-- dormir&#45;&#45;runmem -->
+<g id="edge13" class="edge">
+<title>dormir--runmem</title>
+<path fill="none" stroke="black" d="M115.61,-155.38C116.21,-155.23 116.81,-155.09 117.41,-154.94"></path>
+</g>
+<!-- swap -->
+<g id="node9" class="node">
+<title>swap</title>
+<ellipse fill="none" stroke="black" cx="94.95" cy="-240.27" rx="30.77" ry="18"></ellipse>
+<text text-anchor="middle" x="94.95" y="-236.07" font-family="Times,serif" font-size="14.00">swap</text>
+</g>
+<!-- dormir&#45;&#45;swap -->
+<g id="edge8" class="edge">
+<title>dormir--swap</title>
+<path fill="none" stroke="black" d="M85.26,-181.65C87.28,-193.9 89.94,-209.98 91.96,-222.19"></path>
+</g>
+<!-- runswap -->
+<g id="node10" class="node">
+<title>runswap</title>
+<ellipse fill="none" stroke="black" cx="169.79" cy="-223.49" rx="43.51" ry="18"></ellipse>
+<text text-anchor="middle" x="169.79" y="-219.29" font-family="Times,serif" font-size="14.00">runswap</text>
+</g>
+<!-- swap&#45;&#45;runswap -->
+<g id="edge9" class="edge">
+<title>swap--runswap</title>
+<path fill="none" stroke="black" d="M124.1,-233.73C126.48,-233.2 128.91,-232.65 131.34,-232.11"></path>
+</g>
+<!-- runswap&#45;&#45;runmem -->
+<g id="edge11" class="edge">
+<title>runswap--runmem</title>
+<path fill="none" stroke="black" d="M166.35,-205.48C163.97,-193.03 160.81,-176.53 158.42,-164.04"></path>
+</g>
+<!-- nouveau -->
+<g id="node11" class="node">
+<title>nouveau</title>
+<ellipse fill="none" stroke="black" cx="222.48" cy="-176.77" rx="43.5" ry="18"></ellipse>
+<text text-anchor="middle" x="222.48" y="-172.57" font-family="Times,serif" font-size="14.00">nouveau</text>
+</g>
+<!-- runswap&#45;&#45;nouveau -->
+<g id="edge10" class="edge">
+<title>runswap--nouveau</title>
+<path fill="none" stroke="black" d="M188.22,-207.15C193.32,-202.62 198.86,-197.71 203.97,-193.18"></path>
+</g>
+<!-- nouveau&#45;&#45;runmem -->
+<g id="edge12" class="edge">
+<title>nouveau--runmem</title>
+<path fill="none" stroke="black" d="M193.05,-163.31C190.07,-161.94 187.03,-160.55 184.05,-159.19"></path>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Cela vous montre à quel point Quarto regroupe une large gamme de fonctionalité que vous pourrez utiliser dans vos travail.</p>
+<p>Egalement il est possible d’ajouter des forme sur un fichier :</p>
+<p>par exemple nous pouvons utiliser la syntaxe suivante dans un div <code>background: #2780e3; width: 350px; height: 350px; border-radius: 100px;</code></p>
+<div style="background: #2780e3; width: 350px; height: 350px; border-radius: 100px;">
+
+</div>
+<p>Enfin, nous pouvons ajouter des notes à notre document Quarto en tilisant cette syntaxe:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nous sommes ouvert à vos: <code>recommendations</code>, <code>conseils</code> et <code>suggestions.</code></p>
+<p>Merci D’avoir pris du temps de visualiser cet document.</p>
+</div>
+</div>
+<p><strong><em>Ceci met fin a notre document, nous esperons que vous l’avez apprecié.</em></strong>😊</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>le groupe sur Rmarkdown nous expliquera ce que designe reelement Rmarkdown<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
