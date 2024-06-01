@@ -422,10 +422,50 @@
     "href": "project.html",
     "title": "Quarto",
     "section": "",
-    "text": "This project is about explaining how does quarto works. Here, we describe precisely by examples and presentations how that works\n\nDescription of Quarto\n\n    It appears you don't have a PDF plugin for this browser.\n    No biggie... you can click here to\n    download the PDF file.\n\n\n\nBeamer presentation\n\n    It appears you don't have a PDF plugin for this browser.\n    No biggie... you can click here to\n    download the PDF file.\n\n\n\nPractice\nWell, you are looking at the practice part.\nPlease, also visit this link",
+    "text": "This project is dedicated to Quarto programming. Here, we go over all the aspects of the Quarto framework and all the possibilities it offers to R programmers, data scientists, data analysts and even web developpers.\nQuarto brings out a new setup of tools that can be used in addition to Rmarkdown to build interesting, captivating applications, going from documents(PDF, MS Word, PowerPoint, Typst and a lot of different formats), to websites (Quarto website itself is made with Quarto), and dashboards (Some examples will be given and we will go over a particular dashboard developed by ourselves), books (Very known R books have been made using Quarto).\nQuarto has a lot of specifications compared with Rmarkdown. Our main objective here is to make you understand how to program in Quarto and build your own documents, dashboards, websites, books.\n\nPrerequisites\nSome prerequisites are a good understanding of Rmarkdown and markdown generally. We will indeed go over some basics of Markdown syntax but we will not go over it deeply. A good comprehension of Rmarkdown or markdown is essential for Quarto programmation in this course.\nSo here is a link to a website where you can learn about Rmarkdown if you don’t know anything about it.\n\n\nDescription of Quarto\nQuarto is a complex framework as it incorporates many different features of the modern programmation. We went over some aspects of Quarto but here is a more complete description of Quarto. You can download the file below.\n\n    It appears you don't have a PDF plugin for this browser.\n    No biggie... you can click here to\n    download the PDF file.\n\n\n\nBeamer presentation\n\n    It appears you don't have a PDF plugin for this browser.\n    No biggie... you can click here to\n    download the PDF file.\n\n\n\nPractice\nThis website itself is a good pratice of Quarto Website programming. The source code of this website is available on GitHub. You can go over, reverse engineer it and get an understanding of how it is done.\nAnother practice of Quarto will be presented below. We will go over the creation of documents, a dashboard, and a book.\nGallery",
     "crumbs": [
       "Projects",
       "Quarto"
     ]
+  },
+  {
+    "objectID": "project.html#documents",
+    "href": "project.html#documents",
+    "title": "Quarto",
+    "section": "Documents",
+    "text": "Documents\n\nPDF Generation\n\n\nWord Generation\n\n\nPowerPoint Generation\n\n\nHTML Generation",
+    "crumbs": [
+      "Projects",
+      "Quarto"
+    ]
+  },
+  {
+    "objectID": "project.html#dashboard",
+    "href": "project.html#dashboard",
+    "title": "Quarto",
+    "section": "Dashboard",
+    "text": "Dashboard",
+    "crumbs": [
+      "Projects",
+      "Quarto"
+    ]
+  },
+  {
+    "objectID": "project.html#book",
+    "href": "project.html#book",
+    "title": "Quarto",
+    "section": "Book",
+    "text": "Book",
+    "crumbs": [
+      "Projects",
+      "Quarto"
+    ]
+  },
+  {
+    "objectID": "projects/quarto/gallery.html",
+    "href": "projects/quarto/gallery.html",
+    "title": "Quarto Gallery",
+    "section": "",
+    "text": "Here is the gallery of the Quarto project. We give you here all we achieved through the work and the documents including source code links\n\n\n\nQuarto dashboard\n\n\n\n\n\nQuarto book\n\n\nGithub repository for the book\nGithub repository for website"
   }
 ]

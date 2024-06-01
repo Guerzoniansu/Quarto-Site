@@ -205,5 +205,12 @@ a.guide:hover {
 }
 
 
+a[href="https://guerzoniansu.github.io/Quarto-Book/"] {
+    img {
+        border: 1px solid;
+    }
+}
+
+
 
 
